@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── Brand tokens ─────────────────────────────────────────── */
+:root {
+  /* Lumiron palette */
+  --ivoire:        #F0EEE8;
+  --ivoire-2:      #EAE7DE;
+  --ivoire-soft:   #E5E1D4;
+  --encre:         #1A1A1A;
+  --coral:         #FF5C39;
+  --gris:          #6B6B6B;
+  --gris-light:    #9C9486;
+  --line:          rgba(26,26,26,.12);
+  --line-strong:   rgba(26,26,26,.40);
+
+  /* ShadCN overrides → brand */
+  --background:           var(--ivoire);
+  --foreground:           var(--encre);
+  --card:                 var(--ivoire);
+  --card-foreground:      var(--encre);
+  --primary:              var(--encre);
+  --primary-foreground:   var(--ivoire);
+  --secondary:            var(--ivoire-soft);
+  --secondary-foreground: var(--encre);
+  --muted:                var(--ivoire-2);
+  --muted-foreground:     var(--gris);
+  --accent:               var(--coral);
+  --accent-foreground:    #fff;
+  --border:               var(--line);
+  --input:                var(--line);
+  --ring:                 var(--coral);
+  --radius:               0.125rem;
+
+  /* Kept for ShadCN internals */
+  --popover:              var(--ivoire);
+  --popover-foreground:   var(--encre);
+  --destructive:          var(--coral);
+}
+
+@theme inline {
+  --color-ivoire:       var(--ivoire);
+  --color-ivoire-2:     var(--ivoire-2);
+  --color-ivoire-soft:  var(--ivoire-soft);
+  --color-encre:        var(--encre);
+  --color-coral:        var(--coral);
+  --color-gris:         var(--gris);
+  --color-gris-light:   var(--gris-light);
+  --color-line:         var(--line);
+
+  --color-background:   var(--background);
+  --color-foreground:   var(--foreground);
+  --color-primary:      var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent:       var(--accent);
+  --color-muted:        var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border:       var(--border);
+  --color-ring:         var(--ring);
+
+  --font-sans:          var(--font-inter);
+  --font-serif:         var(--font-instrument-serif);
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    @apply scroll-smooth;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  body {
+    @apply bg-ivoire text-encre overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  a { @apply text-inherit no-underline; }
+  img { @apply block max-w-full; }
+
+  ::selection { background: var(--coral); color: #fff; }
+}
+
+/* ── Typography helpers ───────────────────────────────────── */
+@layer utilities {
+  .font-serif-italic {
+    font-family: var(--font-instrument-serif), 'Times New Roman', serif;
+    font-style: italic;
+  }
+}
