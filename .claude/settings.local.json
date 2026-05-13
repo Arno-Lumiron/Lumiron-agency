@@ -17,7 +17,9 @@
       "Bash(npm run *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\arnol\\\\Lumiron\\\\Lumiron-agency\\\\public\\\\favicon.svg\")",
+      "Bash(node -e \"const pkg = require\\('./node_modules/framer-motion/package.json'\\); console.log\\(pkg.version\\)\")"
     ]
   }
 }

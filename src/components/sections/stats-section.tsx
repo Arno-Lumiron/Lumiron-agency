@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 export function StatsSection() {
   return (
-    <section className="py-[140px] bg-encre text-ivoire" aria-labelledby="stats-heading">
+    <section className="py-[70px] bg-encre text-ivoire" aria-labelledby="stats-heading">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Chiffres"
@@ -24,7 +24,7 @@ export function StatsSection() {
             <StaggerChild
               key={stat.label}
               className={cn(
-                'border-r border-ivoire p-8 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-between min-h-[240px]',
+                'border-r border-ivoire p-4 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-between min-h-[240px]',
                 'last:border-r-0',
                 'even:border-r-0 md:even:border-r',
                 i === STATS.length - 1 && 'md:border-r-0',
@@ -35,7 +35,7 @@ export function StatsSection() {
               </span>
 
               <div
-                className="text-[clamp(54px,7vw,88px)] font-medium tracking-[-0.04em] leading-[.9] text-coral"
+                className="text-[clamp(40px,7vw,88px)] min-[350px]:text-[clamp(54px,7vw,88px)] font-medium tracking-[-0.04em] leading-[.9] text-coral"
                 aria-label={`${stat.value}${stat.index}`}
               >
                 {stat.label === 'Mise en prod' ? (

@@ -11,12 +11,12 @@ import { REASSURANCES } from "@/lib/constants";
 
 export function HeroSection() {
 	return (
-		<section className="pt-[60px] pb-[120px]" aria-labelledby="hero-heading">
+		<section className="pt-[50px] pb-[60px]" aria-labelledby="hero-heading">
 			<div className="max-w-[1280px] mx-auto px-5 md:px-10">
 				{/* Tags */}
 				<AnimatedStagger className="flex gap-2.5 mb-9 flex-wrap">
 					<StaggerChild>
-						<Tag variant="black">✦ Agence IA</Tag>
+						<Tag variant="black">✦ STANDARD D&apos;EXÉCUTION INTELLIGENTE</Tag>
 					</StaggerChild>
 				</AnimatedStagger>
 
@@ -30,18 +30,15 @@ export function HeroSection() {
 							className="font-medium text-[clamp(52px,6vw,76px)] leading-[1.1] tracking-[-0.04em] m-0 mb-8"
 							delayPerChar={22}
 						>
-							Vos tâches en moins.{"\n"}Vos résultats{" "}
-							<span className="text-coral">en plus.</span>
+							L&apos;agence qui construit les syst&egrave;mes IA op&eacute;rationnels des entreprises.
 						</AnimatedText>
 
 						<AnimatedReveal delay={600}>
 							<p className="text-[17px] leading-[1.55] max-w-[56ch] mb-0 font-normal text-encre">
-								Lumiron conçoit et déploie des agents IA, outils sur mesure et
-								intégrations métier pour les entreprises qui veulent gagner en
-								productivité, sans complexité technique. De la gestion des
-								appels clients à l&apos;automatisation des tâches stratégiques,
-								nous transformons votre organisation avec des solutions
-								concrètes, mesurables et rapidement opérationnelles.
+								Lumion bâtit les infrastructures autonomes qui pilotent vos outils,
+								coordonnent vos équipes et valident vos résultats sans intervention
+								humaine. Nous transformons votre vision stratégique en une exécution
+								technique fluide, permanente et sans friction.
 							</p>
 						</AnimatedReveal>
 
@@ -50,10 +47,10 @@ export function HeroSection() {
 							className="flex gap-3 mt-7 flex-wrap items-center"
 						>
 							<Btn variant="primary" href="#contact">
-								Réserver une démo →
+								RÉSERVER UNE DÉMO
 							</Btn>
 							<Btn variant="outline" href="#produits">
-								Voir nos produits
+								DÉCOUVRIR NOS AGENTS
 							</Btn>
 						</AnimatedReveal>
 					</div>
@@ -69,7 +66,7 @@ export function HeroSection() {
 				</div>
 
 				{/* Reassurance bar */}
-				<AnimatedStagger className="mt-20 pt-6 border-t border-encre flex gap-6 flex-wrap text-[12px] text-encre tracking-[.04em]">
+				<AnimatedStagger className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-[12px] text-encre tracking-[.04em]">
 					{REASSURANCES.map((item) => (
 						<StaggerChild key={item}>
 							<span className="inline-flex items-center gap-2">

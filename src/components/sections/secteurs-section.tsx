@@ -15,7 +15,7 @@ const ICONS = [
 
 export function SecteursSection() {
   return (
-    <section id="secteurs" className="py-[140px]" aria-labelledby="secteurs-heading">
+    <section id="secteurs" className="py-[70px]" aria-labelledby="secteurs-heading">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Secteurs"
@@ -40,7 +40,7 @@ export function SecteursSection() {
                 key={item.sector}
                 delay={delay}
                 className={cn(
-                  'border-r border-b border-encre p-6 md:p-8 flex flex-col gap-4 justify-between min-h-[200px] transition-colors duration-200',
+                  'border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-between min-h-[200px] transition-colors duration-200',
                   !isCta && 'hover:bg-ivoire-soft group',
                   isCta && 'bg-encre text-ivoire',
                   // remove right border on last of each row
@@ -50,7 +50,7 @@ export function SecteursSection() {
                 role="listitem"
               >
                 {/* Top row: icon + sector label */}
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-3">
                   <span
                     className={cn(
                       'w-10 h-10 inline-flex items-center justify-center transition-colors duration-200',
@@ -85,7 +85,7 @@ export function SecteursSection() {
                 </div>
 
                 {isCta && (
-                  <Btn variant="coral" href="#contact" className="self-start text-[11px]">
+                  <Btn variant="coral" href="#contact" className="self-start text-[11px] px-3 py-1.5 md:px-6 md:py-3">
                     On s'adapte →
                   </Btn>
                 )}

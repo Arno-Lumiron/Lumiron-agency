@@ -6,7 +6,7 @@ import { PRODUCTS } from '@/lib/constants';
 
 export function ProduitsSection() {
   return (
-    <section id="produits" className="py-[140px] bg-ivoire" aria-labelledby="produits-heading">
+    <section id="produits" className="py-[70px] bg-ivoire" aria-labelledby="produits-heading">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Nos produits phares"
@@ -27,7 +27,7 @@ export function ProduitsSection() {
           className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] border-t-2 border-b-2 border-encre bg-encre"
           aria-label="Nos deux produits"
         >
-          <ProduitCard product={PRODUCTS[1]} direction="left" />
+          <div id="iko"><ProduitCard product={PRODUCTS[1]} direction="left" /></div>
           {/* Divider */}
           <div className="hidden md:block bg-encre w-px" aria-hidden="true" />
           <ProduitCard product={PRODUCTS[0]} direction="right" />

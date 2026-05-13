@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export function AvisSection() {
   return (
-    <section id="avis" className="py-[140px]" aria-labelledby="avis-heading">
+    <section id="avis" className="py-[70px]" aria-labelledby="avis-heading">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Témoignages"
@@ -15,7 +15,7 @@ export function AvisSection() {
         />
 
         <AnimatedStagger
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-encre"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-l border-encre"
           aria-label="Témoignages clients"
         >
           {TESTIMONIALS.map((t, i) => (
@@ -23,9 +23,6 @@ export function AvisSection() {
               key={t.name}
               className={cn(
                 'border-r border-b border-encre p-5 md:p-[18px_24px_20px] flex flex-col gap-4 justify-between min-h-[272px] bg-ivoire',
-                'last:border-r-0',
-                'sm:even:border-r-0 md:even:border-r',
-                i === TESTIMONIALS.length - 1 && 'md:border-r-0',
               )}
             >
               {/* Stars */}

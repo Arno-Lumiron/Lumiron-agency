@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export function OffreSection() {
   return (
-    <section id="offre" className="py-[140px]" aria-labelledby="offre-heading">
+    <section id="offre" className="py-[70px]" aria-labelledby="offre-heading">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Ce que l'on propose"
@@ -27,7 +27,7 @@ export function OffreSection() {
               key={item.num}
               delay={i * 80}
               className={cn(
-                'border-r border-b border-encre p-8 md:p-9 flex flex-col gap-4 min-h-[300px] transition-colors duration-200',
+                'border-r border-b border-encre p-5 md:p-9 flex flex-col gap-4 min-h-[300px] transition-colors duration-200',
                 item.featured
                   ? 'bg-encre text-ivoire hover:bg-encre'
                   : 'bg-ivoire hover:bg-white',
@@ -38,7 +38,7 @@ export function OffreSection() {
               <div className="flex justify-between items-start">
                 <span
                   className={cn(
-                    'text-[11px] tracking-[.18em] font-medium',
+                    'text-[22px] font-semibold leading-none tracking-tight',
                     item.featured ? 'text-gris-light' : 'text-gris',
                   )}
                 >
@@ -46,12 +46,12 @@ export function OffreSection() {
                 </span>
                 <span
                   className={cn(
-                    'w-[30px] h-[30px] border flex items-center justify-center text-[14px] font-semibold flex-shrink-0',
-                    item.featured ? 'border-coral text-coral' : 'border-encre text-encre',
+                    'inline-flex items-center justify-center shrink-0',
+                    item.featured ? 'text-coral' : 'text-encre',
                   )}
                   aria-hidden="true"
                 >
-                  {item.glyph}
+                  <item.Icon size={26} strokeWidth={1.5} />
                 </span>
               </div>
 

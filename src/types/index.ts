@@ -11,9 +11,11 @@ export interface SecteurItem {
   icon: string; // lucide icon name
 }
 
+import type { LucideIcon } from 'lucide-react';
+
 export interface OffreItem {
   num: string;
-  glyph: string;
+  Icon: LucideIcon;
   title: string;
   description: string;
   featured?: boolean;

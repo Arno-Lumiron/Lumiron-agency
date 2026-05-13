@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/lib/constants';
 import { Btn } from '@/components/shared/btn';
@@ -19,7 +21,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 border-b border-line transition-shadow duration-300',
+        'fixed top-0 left-0 right-0 z-50 border-b border-line transition-shadow duration-300',
         'bg-[rgba(245,241,232,.92)] backdrop-blur-[12px]',
         scrolled && 'shadow-sm'
       )}
@@ -27,9 +29,15 @@ export function Navbar() {
     >
       <nav className="max-w-[1280px] mx-auto px-5 md:px-10 flex items-center justify-between h-[72px]" aria-label="Navigation principale">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 text-[22px] font-medium tracking-[-0.02em] lowercase text-encre" aria-label="Lumiron — Retour à l'accueil">
-          <span className="w-2 h-2 rounded-full bg-coral flex-shrink-0" aria-hidden="true" />
-          lumiron
+        <a href="/" aria-label="Lumiron — Retour à l'accueil">
+          <Image
+            src="/logo noir fond blanc v2.png"
+            alt="Lumiron"
+            width={77}
+            height={23}
+            priority
+            className="h-5.5 w-auto"
+          />
         </a>
 
         {/* Desktop links */}
@@ -65,23 +73,55 @@ export function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-ivoire border-t border-line px-5 pb-6 pt-4 flex flex-col gap-4">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[15px] text-encre hover:text-coral transition-colors py-1"
-              onClick={() => setOpen(false)}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            className="md:hidden overflow-hidden border-t border-line bg-ivoire"
+          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.06, delayChildren: 0.08 } },
+              }}
+              className="px-5 pb-6 pt-4 flex flex-col gap-1"
             >
-              {link.label}
-            </a>
-          ))}
-          <Btn variant="primary" href="#contact" className="mt-2 self-start text-[12px]">
-            Réserver une démo →
-          </Btn>
-        </div>
-      )}
+              {NAV_LINKS.map((link) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  variants={{
+                    hidden: { opacity: 0, x: -10 },
+                    visible: { opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut' } },
+                  }}
+                  className="text-[15px] text-encre hover:text-coral transition-colors py-2 border-b border-line/40 last:border-0"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 6 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut' } },
+                }}
+                className="mt-4"
+              >
+                <Btn variant="primary" href="#contact" className="self-start text-[12px]">
+                  Réserver une démo →
+                </Btn>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

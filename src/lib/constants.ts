@@ -1,46 +1,47 @@
+import { PhoneCall, LineChart, Plug, LayoutDashboard, Brain, ShieldCheck } from 'lucide-react';
 import type { NavLink, OffreItem, StatItem, TestimonialItem, Product } from '@/types';
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Secteurs', href: '#secteurs' },
   { label: 'Ori', href: '#produits' },
-  { label: 'Iko', href: '#produits' },
+  { label: 'Iko', href: '#iko' },
+  { label: 'Blog', href: '#blog' },
 ];
 
 export const OFFRE_ITEMS: OffreItem[] = [
   {
-    num: '01 / 06',
-    glyph: '✦',
+    num: '1',
+    Icon: PhoneCall,
     title: 'Gestion appels & messages',
     description: "Plus jamais d'appel raté. Plus jamais de message en attente. Vos clients sont pris en charge en temps réel — téléphone, WhatsApp, mail ou chat.",
     featured: true,
   },
   {
-    num: '02 / 06',
-    glyph: '◦',
+    num: '2',
+    Icon: LineChart,
     title: 'Tracking & data',
     description: 'Tout est mesuré. Tout est lisible. Vous voyez ce qui marche, ce qui décroche, ce qui rapporte.',
   },
   {
-    num: '03 / 06',
-    glyph: '⌘',
+    num: '3',
+    Icon: Plug,
     title: 'Intégrations métier',
     description: 'On se branche à vos outils existants : CRM, agenda, caisse, ERP. Zéro double saisie.',
   },
   {
-    num: '04 / 06',
-    glyph: '▤',
+    num: '4',
+    Icon: LayoutDashboard,
     title: 'Dashboards sur-mesure',
     description: "Une vue claire pour vos équipes. Une vue stratégique pour vous. D'un coup d'œil, vous pilotez.",
   },
   {
-    num: '05 / 06',
-    glyph: '◦',
+    num: '5',
+    Icon: Brain,
     title: 'IA personnalisée',
     description: "Votre ton. Vos process. Vos données. On entraîne l'IA à parler comme vous, pas comme un robot.",
   },
   {
-    num: '06 / 06',
-    glyph: '⬡',
+    num: '6',
+    Icon: ShieldCheck,
     title: 'Sécurité & RGPD',
     description: 'Données chiffrées, hébergées en Europe, conformes RGPD. Vos données restent les vôtres.',
   },
@@ -95,7 +96,7 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-export const REASSURANCES = ['RGPD', 'Hébergé en France', 'Live en 4 semaines', 'Sans engagement'];
+export const REASSURANCES = ['SOUVERAINETÉ', 'VITESSE', 'Fiabilité'];
 
 export const SECTEURS = [
   { sector: 'Restauration', name: 'Plus une réservation perdue.' },

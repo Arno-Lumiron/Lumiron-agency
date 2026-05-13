@@ -8,7 +8,7 @@ export function HeroGraphic() {
 
   return (
     <div
-      className="relative w-full aspect-square max-w-[360px] ml-auto mr-[-20px] mt-1.5"
+      className="relative w-full aspect-square max-w-[360px] ml-auto mt-1.5"
       aria-hidden="true"
     >
       {/* Spinning dotted circle */}
