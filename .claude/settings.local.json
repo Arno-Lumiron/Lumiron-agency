@@ -15,7 +15,8 @@
       "Bash(npx tsc *)",
       "Bash(echo \"EXIT:$?\")",
       "Bash(npm run *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
