@@ -6,8 +6,8 @@ import { cn } from '@/lib/utils';
 
 export function StatsSection() {
   return (
-    <section className="py-[70px] bg-encre text-ivoire" aria-labelledby="stats-heading">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-10">
+    <section className="py-17.5 bg-encre text-ivoire" aria-labelledby="stats-heading">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Chiffres"
           heading={
@@ -24,7 +24,7 @@ export function StatsSection() {
             <StaggerChild
               key={stat.label}
               className={cn(
-                'border-r border-ivoire p-4 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-between min-h-[240px]',
+                'border-r border-ivoire p-4 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-between min-h-60',
                 'last:border-r-0',
                 'even:border-r-0 md:even:border-r',
                 i === STATS.length - 1 && 'md:border-r-0',
@@ -52,7 +52,7 @@ export function StatsSection() {
                 )}
               </div>
 
-              <span className="text-[14px] text-gris-light leading-[1.5] max-w-[24ch]">
+              <span className="text-sm text-gris-light leading-normal max-w-[24ch]">
                 {stat.description}
               </span>
             </StaggerChild>

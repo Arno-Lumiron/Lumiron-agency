@@ -5,16 +5,16 @@ import { cn } from '@/lib/utils';
 
 export function OffreSection() {
   return (
-    <section id="offre" className="py-[70px]" aria-labelledby="offre-heading">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-10">
+    <section id="offre" className="py-17.5" aria-labelledby="offre-heading">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Ce que l'on propose"
           heading={
             <>
-              Des solutions <span className="text-coral">complètes</span>, du premier appel jusqu'au <span className="text-coral">tableau de bord.</span>
+              Des solutions <span className="text-coral">complètes</span>, du premier appel jusqu&apos;au <span className="text-coral">tableau de bord.</span>
             </>
           }
-          lead="Lumiron ne vend pas seulement de la technologie : nous concevons des écosystèmes opérationnels, intégrés à vos outils existants et pilotés par la donnée."
+          lead="Lumiron ne vend pas seulement de la technologie&nbsp;: nous concevons des écosystèmes opérationnels, intégrés à vos outils existants et pilotés par la donnée."
         />
 
         <div
@@ -27,7 +27,7 @@ export function OffreSection() {
               key={item.num}
               delay={i * 80}
               className={cn(
-                'border-r border-b border-encre p-5 md:p-9 flex flex-col gap-4 min-h-[300px] transition-colors duration-200',
+                'border-r border-b border-encre p-5 md:p-9 flex flex-col gap-4 min-h-75 transition-colors duration-200',
                 item.featured
                   ? 'bg-encre text-ivoire hover:bg-encre'
                   : 'bg-ivoire hover:bg-white',
@@ -57,7 +57,7 @@ export function OffreSection() {
 
               <h3
                 className={cn(
-                  'text-[24px] font-medium tracking-[-0.015em] leading-[1.1] mt-2',
+                  'text-2xl font-medium tracking-[-0.015em] leading-[1.1] mt-2',
                   item.featured ? 'text-ivoire' : 'text-encre',
                 )}
               >

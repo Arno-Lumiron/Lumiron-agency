@@ -36,7 +36,7 @@ export function Footer() {
 							height={30}
 							className="h-6.5 w-auto brightness-0 invert"
 						/>
-						<p className="mt-5 text-[14px] text-gris-light leading-[1.55] max-w-[36ch]">
+						<p className="mt-5 text-sm text-gris-light leading-[1.55] max-w-[36ch]">
 							L&apos;IA qui éclaire votre business. Agents conversationnels,
 							outils sur-mesure, intégrations métier.
 						</p>
@@ -45,7 +45,7 @@ export function Footer() {
 					{/* Link columns */}
 					{Object.entries(FOOTER_LINKS).map(([section, links]) => (
 						<div key={section}>
-							<h5 className="text-[11px] tracking-[.18em] uppercase text-gris-light font-medium mb-4">
+							<h5 className="text-xs tracking-[.18em] uppercase text-gris-light font-medium mb-4">
 								{section}
 							</h5>
 							<ul className="space-y-0 list-none p-0 m-0">
@@ -53,7 +53,7 @@ export function Footer() {
 									<li key={link.label}>
 										<a
 											href={link.href}
-											className="block text-ivoire text-[14px] py-1.5 hover:text-coral transition-colors duration-150"
+											className="block text-ivoire text-sm py-1.5 hover:text-coral transition-colors duration-150"
 										>
 											{link.label}
 										</a>
@@ -66,7 +66,7 @@ export function Footer() {
 
 				{/* Big watermark */}
 				<div
-					className="mt-10 pt-12 border-t border-[rgba(245,241,232,.18)] text-center font-medium tracking-[-0.05em] leading-[.85] lowercase select-none"
+					className="mt-10 pt-12 border-t border-[rgba(245,241,232,.18)] text-center font-medium tracking-tighter leading-[.85] lowercase select-none"
 					style={{
 						fontSize: "clamp(52px, 18vw, 320px)",
 						background: "linear-gradient(180deg, #ffffff 0%, #1a1a1a 100%)",
@@ -81,7 +81,7 @@ export function Footer() {
 				</div>
 
 				{/* Bottom bar */}
-				<div className="mt-8 flex flex-col sm:flex-row justify-between gap-2 text-[11px] tracking-[.18em] uppercase text-gris-light">
+				<div className="mt-8 flex flex-col sm:flex-row justify-between gap-2 text-xs tracking-[.18em] uppercase text-gris-light">
 					<span>© 2026 Lumiron · Tous droits réservés</span>
 					<span>Fait à Paris</span>
 				</div>

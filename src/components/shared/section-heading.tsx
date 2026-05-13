@@ -27,7 +27,7 @@ export function SectionHeading({
 				as={headingSize}
 				className={cn(
 					"font-medium tracking-[-0.03em] leading-[1.2]! m-0 hyphens-none break-keep [&>span]:align-top",
-					headingSize === "h2" ? "text-[clamp(42px,5vw,64px)]" : "text-[30px]",
+					headingSize === "h2" ? "text-[clamp(42px,5vw,64px)]" : "text-3xl",
 					light && "text-ivoire",
 				)}
 			>

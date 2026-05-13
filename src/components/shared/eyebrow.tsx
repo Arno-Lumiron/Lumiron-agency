@@ -15,7 +15,7 @@ export function Eyebrow({ children, light, className }: EyebrowProps) {
         className
       )}
     >
-      <span className="w-1.5 h-1.5 rounded-full bg-coral flex-shrink-0" />
+      <span className="w-1.5 h-1.5 rounded-full bg-coral shrink-0" />
       {children}
     </span>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -22,14 +23,14 @@ export function Navbar() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 border-b border-line transition-shadow duration-300',
-        'bg-[rgba(245,241,232,.92)] backdrop-blur-[12px]',
+        'bg-[rgba(245,241,232,.92)] backdrop-blur-md',
         scrolled && 'shadow-sm'
       )}
       role="banner"
     >
-      <nav className="max-w-[1280px] mx-auto px-5 md:px-10 flex items-center justify-between h-[72px]" aria-label="Navigation principale">
+      <nav className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-18" aria-label="Navigation principale">
         {/* Logo */}
-        <a href="/" aria-label="Lumiron — Retour à l'accueil">
+        <Link href="/" aria-label="Lumiron — Retour à l'accueil">
           <Image
             src="/logo noir fond blanc v2.png"
             alt="Lumiron"
@@ -38,7 +39,7 @@ export function Navbar() {
             priority
             className="h-5.5 w-auto"
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-8 text-[13px] text-encre list-none m-0 p-0" role="list">
@@ -46,7 +47,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="hover:text-coral transition-colors duration-150 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-coral hover:after:w-full after:transition-all"
+                className="hover:text-coral transition-colors duration-150 relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-coral hover:after:w-full after:transition-all"
               >
                 {link.label}
               </a>
@@ -56,7 +57,7 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-[12px]">
+          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-xs">
             Réserver une démo →
           </Btn>
 
@@ -114,7 +115,7 @@ export function Navbar() {
                 }}
                 className="mt-4"
               >
-                <Btn variant="primary" href="#contact" className="self-start text-[12px]">
+                <Btn variant="primary" href="#contact" className="self-start text-xs">
                   Réserver une démo →
                 </Btn>
               </motion.div>

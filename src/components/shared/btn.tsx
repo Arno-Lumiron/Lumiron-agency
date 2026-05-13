@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 
 const btnVariants = cva(
   [
-    'inline-flex items-center gap-2.5 px-[22px] py-[14px]',
+    'inline-flex items-center gap-2.5 px-5.5 py-3.5',
     'font-medium text-[13px] tracking-[.04em] uppercase',
     'border-[1.5px] cursor-pointer font-sans',
     'transition-[transform,box-shadow,background,color] duration-150 ease-out',
@@ -21,7 +21,7 @@ const btnVariants = cva(
         ],
         primary: [
           'border-encre bg-encre text-ivoire shadow-[3px_3px_0_var(--coral)]',
-          'hover:shadow-[6px_6px_0_var(--coral)] hover:-translate-x-[3px] hover:-translate-y-[3px]',
+          'hover:shadow-[6px_6px_0_var(--coral)] hover:-translate-x-0.75 hover:-translate-y-0.75',
         ],
         coral: [
           'border-coral bg-coral text-white shadow-[3px_3px_0_var(--encre)]',

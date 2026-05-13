@@ -8,7 +8,7 @@ export function HeroGraphic() {
 
   return (
     <div
-      className="relative w-full aspect-square max-w-[360px] ml-auto mt-1.5"
+      className="relative w-full aspect-square max-w-90 ml-auto mt-1.5"
       aria-hidden="true"
     >
       {/* Spinning dotted circle */}
@@ -43,7 +43,7 @@ export function HeroGraphic() {
 
       {/* Pulsing dot */}
       <motion.div
-        className="absolute w-[18px] h-[18px] rounded-full bg-encre"
+        className="absolute size-4.5 rounded-full bg-encre"
         style={{ right: '6%', top: '60%' }}
         animate={reduced ? {} : { scale: [1, 1.25, 1], opacity: [1, 0.7, 1] }}
         transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}

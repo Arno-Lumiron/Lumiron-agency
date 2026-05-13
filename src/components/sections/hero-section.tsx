@@ -11,8 +11,8 @@ import { REASSURANCES } from "@/lib/constants";
 
 export function HeroSection() {
 	return (
-		<section className="pt-[50px] pb-[60px]" aria-labelledby="hero-heading">
-			<div className="max-w-[1280px] mx-auto px-5 md:px-10">
+		<section className="pt-12.5 pb-15" aria-labelledby="hero-heading">
+			<div className="max-w-7xl mx-auto px-5 md:px-10">
 				{/* Tags */}
 				<AnimatedStagger className="flex gap-2.5 mb-9 flex-wrap">
 					<StaggerChild>
@@ -21,7 +21,7 @@ export function HeroSection() {
 				</AnimatedStagger>
 
 				{/* Hero grid */}
-				<div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.35fr)_minmax(0,360px)] gap-10 md:gap-[60px] items-start">
+				<div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.35fr)_minmax(0,360px)] gap-10 md:gap-15 items-start">
 					{/* Left column */}
 					<div className="flex flex-col">
 						<AnimatedText
@@ -30,7 +30,9 @@ export function HeroSection() {
 							className="font-medium text-[clamp(52px,6vw,76px)] leading-[1.1] tracking-[-0.04em] m-0 mb-8"
 							delayPerChar={22}
 						>
-							L&apos;agence qui construit les syst&egrave;mes IA op&eacute;rationnels des entreprises.
+							L&apos;agence qui construit les{" "}
+							<span className="text-coral">syst&egrave;mes IA op&eacute;rationnels</span>{" "}
+							des entreprises.
 						</AnimatedText>
 
 						<AnimatedReveal delay={600}>
@@ -66,7 +68,7 @@ export function HeroSection() {
 				</div>
 
 				{/* Reassurance bar */}
-				<AnimatedStagger className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-[12px] text-encre tracking-[.04em]">
+				<AnimatedStagger className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-xs text-encre tracking-[.04em]">
 					{REASSURANCES.map((item) => (
 						<StaggerChild key={item}>
 							<span className="inline-flex items-center gap-2">

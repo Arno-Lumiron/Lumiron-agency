@@ -14,7 +14,8 @@ interface AnimatedTextProps extends HTMLAttributes<HTMLElement> {
 
 // Rendu statique pur — l'animation wave-reveal est gérée par le script vanilla
 // dans layout.tsx, exactement comme dans le HTML sobre de référence.
-export function AnimatedText({ children, as: TagName = 'h2', className, delayPerChar: _delayPerChar, ...rest }: AnimatedTextProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function AnimatedText({ children, as: TagName = 'h2', className, delayPerChar, ...rest }: AnimatedTextProps) {
   const Tag = TagName as React.ElementType;
   return (
     <Tag className={cn('wave-reveal', className)} {...rest}>

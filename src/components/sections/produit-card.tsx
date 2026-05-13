@@ -25,13 +25,13 @@ export function ProduitCard({ product, direction = "left" }: ProduitCardProps) {
 					{product.id}
 					<span className="not-italic text-coral font-normal">.</span>
 				</span>
-				<span className="text-[11px] tracking-[.18em] text-gris font-medium flex-shrink-0">
+				<span className="text-[11px] tracking-[.18em] text-gris font-medium shrink-0">
 					{product.index}
 				</span>
 			</div>
 
 			{/* Tagline */}
-			<div className="text-[18px] font-medium tracking-[-0.01em] leading-[1.3] pb-6 border-b border-encre">
+			<div className="text-lg font-medium tracking-[-0.01em] leading-[1.3] pb-6 border-b border-encre">
 				{product.tagline}
 			</div>
 
@@ -40,7 +40,7 @@ export function ProduitCard({ product, direction = "left" }: ProduitCardProps) {
 				<span className="text-[11px] tracking-[.18em] uppercase text-gris font-medium">
 					Pour qui ?
 				</span>
-				<span className="text-[14.5px] leading-[1.5] text-encre">
+				<span className="text-[14.5px] leading-normal text-encre">
 					{product.audience}
 				</span>
 			</div>
@@ -74,7 +74,7 @@ export function ProduitCard({ product, direction = "left" }: ProduitCardProps) {
 					<span className="text-[11px] tracking-[.18em] uppercase text-gris font-medium">
 						La promesse
 					</span>
-					<p className="text-[18px] font-medium tracking-[-0.01em] leading-[1.25] m-0">
+					<p className="text-lg font-medium tracking-[-0.01em] leading-tight m-0">
 						{product.promise}{" "}
 						<em className="text-coral italic font-normal">
 							{product.promiseHighlight}

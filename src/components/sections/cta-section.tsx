@@ -2,8 +2,8 @@ import { AnimatedReveal } from '@/components/shared/animated-reveal';
 
 export function CtaSection() {
   return (
-    <section id="contact" className="pb-[70px] pt-10" aria-labelledby="cta-heading">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-10">
+    <section id="contact" className="pb-17.5 pt-10" aria-labelledby="cta-heading">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <AnimatedReveal>
           <div className="relative bg-encre text-ivoire p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 overflow-hidden">
 
@@ -31,7 +31,7 @@ export function CtaSection() {
               >
                 Prêt à gagner du temps&nbsp;?
               </h2>
-              <p className="text-[16px] text-gris-light m-0 leading-[1.5]">
+              <p className="text-base text-gris-light m-0 leading-normal">
                 30 minutes. Une proposition concrète sous 48h.
               </p>
             </div>
@@ -39,7 +39,7 @@ export function CtaSection() {
             {/* CTA button */}
             <a
               href="#"
-              className="relative z-10 flex-shrink-0 inline-flex items-center justify-center bg-ivoire text-encre px-9 py-[18px] font-semibold text-[15px] tracking-[.01em] transition-[transform,box-shadow] duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--coral)]"
+              className="relative z-10 shrink-0 inline-flex items-center justify-center bg-ivoire text-encre px-9 py-4.5 font-semibold text-[15px] tracking-[.01em] transition-[transform,box-shadow] duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--coral)]"
             >
               Réservez une démo
             </a>

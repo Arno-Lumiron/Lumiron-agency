@@ -15,12 +15,12 @@ const ICONS = [
 
 export function SecteursSection() {
   return (
-    <section id="secteurs" className="py-[70px]" aria-labelledby="secteurs-heading">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-10">
+    <section id="secteurs" className="py-17.5" aria-labelledby="secteurs-heading">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
           eyebrow="Secteurs"
           heading={
-            <>Lumiron s'adapte à <span className="text-coral">vous.</span></>
+            <>Lumiron s&apos;adapte à <span className="text-coral">vous.</span></>
           }
           lead="Chaque métier a ses codes. Nos solutions s'adaptent au vôtre — pas l'inverse."
         />
@@ -40,12 +40,12 @@ export function SecteursSection() {
                 key={item.sector}
                 delay={delay}
                 className={cn(
-                  'border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-between min-h-[200px] transition-colors duration-200',
+                  'border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-between min-h-50 transition-colors duration-200',
                   !isCta && 'hover:bg-ivoire-soft group',
                   isCta && 'bg-encre text-ivoire',
                   // remove right border on last of each row
-                  'md:[&:nth-child(4n)]:border-r-0',
-                  '[&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:[&:nth-child(4n)]:border-r-0',
+                  'md:nth-[4n]:border-r-0',
+                  'nth-[2n]:border-r-0 md:nth-[2n]:border-r md:nth-[4n]:border-r-0',
                 )}
                 role="listitem"
               >
@@ -86,7 +86,7 @@ export function SecteursSection() {
 
                 {isCta && (
                   <Btn variant="coral" href="#contact" className="self-start text-[11px] px-3 py-1.5 md:px-6 md:py-3">
-                    On s'adapte →
+                    On s&apos;adapte →
                   </Btn>
                 )}
               </AnimatedReveal>

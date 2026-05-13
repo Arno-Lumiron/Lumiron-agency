@@ -17,7 +17,10 @@ export function useCountUp({ target, duration = 1200, decimals = 0, enabled = tr
 
   useEffect(() => {
     if (!enabled) return;
-    if (reduced) { setValue(target); return; }
+    if (reduced) {
+      requestAnimationFrame(() => setValue(target));
+      return;
+    }
 
     const start = performance.now();
 
