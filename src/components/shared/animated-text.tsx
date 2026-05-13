@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef, type ReactNode, type HTMLAttributes } from 'react';
+import { isValidElement, useRef, type ReactNode, type HTMLAttributes } from 'react';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { cn } from '@/lib/utils';
 
@@ -14,19 +14,42 @@ interface AnimatedTextProps extends HTMLAttributes<HTMLElement> {
   delayPerChar?: number;
 }
 
-function tokenize(node: ReactNode): Array<{ type: 'char' | 'space' | 'element'; content: ReactNode }> {
-  const tokens: Array<{ type: 'char' | 'space' | 'element'; content: ReactNode }> = [];
+type Token =
+  | { type: 'word'; chars: string[] }
+  | { type: 'space' }
+  | { type: 'styled-word'; chars: string[]; className: string };
+
+function tokenize(node: ReactNode): Token[] {
+  const tokens: Token[] = [];
 
   const walk = (child: ReactNode) => {
     if (typeof child === 'string') {
       const parts = child.split(/(\s+)/);
       parts.forEach((part) => {
         if (!part) return;
-        if (/^\s+$/.test(part)) { tokens.push({ type: 'space', content: part }); return; }
-        [...part].forEach((ch) => tokens.push({ type: 'char', content: ch }));
+        if (/^\s+$/.test(part)) { tokens.push({ type: 'space' }); return; }
+        tokens.push({ type: 'word', chars: [...part] });
       });
-    } else {
-      tokens.push({ type: 'element', content: child });
+    } else if (isValidElement(child)) {
+      // Inline span with text children — animate chars with the element's className
+      const el = child as React.ReactElement<{ className?: string; children?: ReactNode }>;
+      const spanClass = el.props.className ?? '';
+      const innerText = el.props.children;
+      if (typeof innerText === 'string') {
+        const parts = innerText.split(/(\s+)/);
+        parts.forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { tokens.push({ type: 'space' }); return; }
+          tokens.push({ type: 'styled-word', chars: [...part], className: spanClass });
+        });
+      } else {
+        // Nested children: recurse with className applied per word
+        const inner = tokenize(innerText);
+        inner.forEach((t) => {
+          if (t.type === 'word') tokens.push({ type: 'styled-word', chars: t.chars, className: spanClass });
+          else tokens.push(t);
+        });
+      }
     }
   };
 
@@ -48,17 +71,14 @@ export function AnimatedText({ children, as: TagName = 'h2', className, delayPer
 
   const Tag = TagName as React.ElementType;
 
-  return (
-    <Tag ref={ref} className={cn(className)} {...rest}>
-      {tokens.map((token, i) => {
-        if (token.type === 'space') return <span key={i}>&nbsp;</span>;
-        if (token.type === 'element') return <span key={i}>{token.content}</span>;
-
+  const renderWord = (chars: string[], wordClass: string, key: number) => (
+    <span key={key} className={wordClass} style={{ display: 'inline-block', whiteSpace: 'nowrap', verticalAlign: 'top' }}>
+      {chars.map((ch, j) => {
         const idx = charIndex++;
         return (
           <motion.span
-            key={i}
-            style={{ display: 'inline-block' }}
+            key={j}
+            style={{ display: 'inline-block', verticalAlign: 'top' }}
             initial={reduced ? {} : { opacity: 0, y: '0.55em', filter: 'blur(6px)' }}
             animate={inView || reduced ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
             transition={{
@@ -67,9 +87,19 @@ export function AnimatedText({ children, as: TagName = 'h2', className, delayPer
               delay: (idx * delayPerChar) / 1000,
             }}
           >
-            {token.content}
+            {ch}
           </motion.span>
         );
+      })}
+    </span>
+  );
+
+  return (
+    <Tag ref={ref} className={cn(className)} {...rest}>
+      {tokens.map((token, i) => {
+        if (token.type === 'space') return ' ';
+        if (token.type === 'word') return renderWord(token.chars, '', i);
+        return renderWord(token.chars, token.className, i);
       })}
     </Tag>
   );

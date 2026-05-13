@@ -12,8 +12,7 @@ export function ProduitsSection() {
           eyebrow="Nos produits phares"
           heading={
             <>
-              L'un répond à <span className="text-coral">vos clients.</span> L'autre vous épaule{' '}
-              <span className="text-coral">au quotidien.</span>
+              L'un répond à <span className="text-coral">vos clients.</span> L'autre vous épaule <span className="text-coral">au quotidien.</span>
             </>
           }
           lead={
@@ -28,10 +27,10 @@ export function ProduitsSection() {
           className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] border-t-2 border-b-2 border-encre bg-encre"
           aria-label="Nos deux produits"
         >
-          <ProduitCard product={PRODUCTS[0]} direction="left" />
+          <ProduitCard product={PRODUCTS[1]} direction="left" />
           {/* Divider */}
           <div className="hidden md:block bg-encre w-px" aria-hidden="true" />
-          <ProduitCard product={PRODUCTS[1]} direction="right" />
+          <ProduitCard product={PRODUCTS[0]} direction="right" />
         </div>
 
         {/* Extras bar */}

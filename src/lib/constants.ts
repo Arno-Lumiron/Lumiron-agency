@@ -2,10 +2,8 @@ import type { NavLink, OffreItem, StatItem, TestimonialItem, Product } from '@/t
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Secteurs', href: '#secteurs' },
-  { label: 'Offre', href: '#offre' },
-  { label: 'Ori & Iko', href: '#produits' },
-  { label: 'Avis', href: '#avis' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Ori', href: '#produits' },
+  { label: 'Iko', href: '#produits' },
 ];
 
 export const OFFRE_ITEMS: OffreItem[] = [

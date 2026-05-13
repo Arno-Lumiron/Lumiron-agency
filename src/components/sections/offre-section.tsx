@@ -11,8 +11,7 @@ export function OffreSection() {
           eyebrow="Ce que l'on propose"
           heading={
             <>
-              Des solutions <span className="text-coral">complètes</span>, du premier appel jusqu'au{' '}
-              <span className="text-coral">tableau de bord.</span>
+              Des solutions <span className="text-coral">complètes</span>, du premier appel jusqu'au <span className="text-coral">tableau de bord.</span>
             </>
           }
           lead="Lumiron ne vend pas seulement de la technologie : nous concevons des écosystèmes opérationnels, intégrés à vos outils existants et pilotés par la donnée."
