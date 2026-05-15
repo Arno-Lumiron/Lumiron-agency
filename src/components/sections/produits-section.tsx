@@ -9,17 +9,13 @@ export function ProduitsSection() {
     <section id="produits" className="py-17.5 bg-ivoire" aria-labelledby="produits-heading">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
-          eyebrow="Nos produits phares"
+          eyebrow="NOS PRODUITS PHARES"
           heading={
             <>
-              L&apos;un répond à <span className="text-coral">vos clients.</span> L&apos;autre vous épaule <span className="text-coral">au quotidien.</span>
+              L&apos;un gère vos échanges. <span className="text-coral">L&apos;autre accélère l&apos;exécution.</span>
             </>
           }
-          lead={
-            <em>
-              Que vous cherchiez à libérer votre équipe de la relation client ou à démultiplier votre temps de dirigeant, Lumiron a conçu un agent IA pour vous.
-            </em>
-          }
+          lead="Deux produits conçus pour réduire la charge opérationnelle des équipes et des dirigeants."
         />
 
         {/* Duo */}
@@ -27,10 +23,10 @@ export function ProduitsSection() {
           className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] border-t-2 border-b-2 border-encre bg-encre"
           aria-label="Nos deux produits"
         >
-          <div id="iko"><ProduitCard product={PRODUCTS[1]} direction="left" /></div>
+          <div id="iko"><ProduitCard product={PRODUCTS[0]} direction="left" /></div>
           {/* Divider */}
           <div className="hidden md:block bg-encre w-px" aria-hidden="true" />
-          <ProduitCard product={PRODUCTS[0]} direction="right" />
+          <ProduitCard product={PRODUCTS[1]} direction="right" />
         </div>
 
         {/* Extras bar */}

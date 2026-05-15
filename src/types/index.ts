@@ -44,7 +44,7 @@ export interface Product {
   tagline: string;
   audience: string;
   features: ProductFeature[];
-  promise: string;
-  promiseHighlight: string;
+  control?: string[];
+  promise: string[];
   cta: string;
 }

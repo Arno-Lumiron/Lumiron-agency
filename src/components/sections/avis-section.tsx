@@ -8,10 +8,11 @@ export function AvisSection() {
     <section id="avis" className="py-17.5" aria-labelledby="avis-heading">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
-          eyebrow="Témoignages"
+          eyebrow="ILS EN PARLENT"
           heading={
-            <>Ils ne reviendraient pas <span className="text-coral">en arrière.</span></>
+            <>Les équipes retrouvent du temps <span className="text-coral">pour l&apos;essentiel.</span></>
           }
+          lead={<>Moins d&apos;interruptions, moins de tâches répétitives, plus de fluidité dans les opérations du quotidien.</>}
         />
 
         <AnimatedStagger

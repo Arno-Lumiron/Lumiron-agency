@@ -24,135 +24,146 @@ export const OFFRE_ITEMS: OffreItem[] = [
 	{
 		num: "1",
 		Icon: PhoneCall,
-		title: "Gestion appels & messages",
+		title: "Agents conversationnels",
 		description:
-			"Plus jamais d'appel raté. Plus jamais de message en attente. Vos clients sont pris en charge en temps réel — téléphone, WhatsApp, mail ou chat.",
+			"Des agents capables de gérer appels, messages et demandes sur tous vos canaux, tout en exécutant vos processus métier.",
 		featured: true,
 	},
 	{
 		num: "2",
 		Icon: LineChart,
-		title: "Tracking & data",
+		title: "Automatisation des opérations",
 		description:
-			"Tout est mesuré. Tout est lisible. Vous voyez ce qui marche, ce qui décroche, ce qui rapporte.",
+			"Vos outils communiquent entre eux pour automatiser les tâches, les suivis et les actions répétitives.",
 	},
 	{
 		num: "3",
 		Icon: Plug,
 		title: "Intégrations métier",
 		description:
-			"On se branche à vos outils existants : CRM, agenda, caisse, ERP. Zéro double saisie.",
+			"CRM, ERP, agenda, caisse, outils internes. Vos systèmes restent connectés et synchronisés.",
 	},
 	{
 		num: "4",
 		Icon: LayoutDashboard,
-		title: "Dashboards sur-mesure",
+		title: "Dashboards opérationnels",
 		description:
-			"Une vue claire pour vos équipes. Une vue stratégique pour vous. D'un coup d'œil, vous pilotez.",
+			"Centralisez le suivi, le pilotage et les données dans une seule interface.",
 	},
 	{
 		num: "5",
 		Icon: Brain,
-		title: "IA personnalisée",
+		title: "Intelligence de données.",
 		description:
-			"Votre ton. Vos process. Vos données. On entraîne l'IA à parler comme vous, pas comme un robot.",
+			"Transformez vos échanges clients en statistiques exploitables.",
 	},
 	{
 		num: "6",
 		Icon: ShieldCheck,
-		title: "Sécurité & RGPD",
+		title: "Infrastructure sécurisée",
 		description:
-			"Données chiffrées, hébergées en Europe, conformes RGPD. Vos données restent les vôtres.",
+			"Données chiffrées, accès sécurisés et infrastructure conforme aux exigences RGPD.",
 	},
 ];
 
 export const STATS: StatItem[] = [
 	{
 		label: "Performance",
-		value: "+87",
-		description: "d'appels traités sans intervention humaine",
+		value: "+40",
+		description: "de flux traités sans intervention humaine",
 		index: "%",
 	},
 	{
 		label: "Productivité",
-		value: "3.2",
-		description: "sur les tâches automatisées",
+		value: "3",
+		description: "plus d'actions exécutées simultanément",
 		index: "×",
 	},
 	{
-		label: "Mise en prod",
-		value: "4",
-		description: "pour passer en production",
-		index: " sem.",
+		label: "Automatisation",
+		value: "80",
+		description: "de tâches répétitives absorbées",
+		index: "%",
 	},
 	{
-		label: "Adoption",
-		value: "150",
-		description: "boîtes nous font déjà confiance",
-		index: "+",
+		label: "Disponibilité",
+		value: "24/7",
+		description: "sans saturation des équipes",
+		index: "",
 	},
 ];
 
 export const TESTIMONIALS: TestimonialItem[] = [
 	{
 		quote:
-			"Installé un mardi. Vendredi, 40 réservations récupérées. Ça change tout.",
+			"Installé mardi. Vendredi, nous avions déjà enregistré plus de réservations sans ajouter une seule personne en salle.",
 		name: "Marc D.",
 		role: "Restaurateur · Lyon",
 	},
 	{
 		quote:
-			"Iko, c'est 2h par jour rendues. Je délègue à la voix. Je ne reviendrai pas en arrière.",
+			"Iko absorbe une partie des micro-tâches qui me prenaient des heures chaque semaine. Tout avance plus vite.",
 		name: "Sophie L.",
-		role: "CEO · SaaS",
+		role: "Founder · Startup SaaS",
 	},
 	{
-		quote: "Briefing lundi. Démo mercredi. En prod 3 semaines plus tard. Rare.",
+		quote:
+			"Déploiement rapide, équipe opérationnelle immédiatement. Les échanges et le suivi sont devenus beaucoup plus fluides.",
 		name: "Thomas R.",
 		role: "Directeur · PME",
 	},
 	{
 		quote:
-			"Une équipe à l'écoute, qui livre vite et bien. Le ROI s'est vu dès le premier mois.",
-		name: "Claire M.",
-		role: "Responsable ops · Retail",
+			"Ce qui prenait plusieurs heures d'analyse et de tri est désormais centralisé et structuré automatiquement. Les équipes traitent plus de dossiers, beaucoup plus vite.",
+		name: "Antoine R.",
+		role: "Partner · Fonds d'investissement",
 	},
 ];
 
 export const PRODUCTS: Product[] = [
 	{
-		id: "ori",
+		id: "iko",
 		index: "▶ Produit 01",
-		tagline: "L'agent qui ne raccroche jamais.",
+		tagline: "Votre bras droit opérationnel.",
 		audience:
-			"Restaurants, hôtels, cabinets, commerces. Tous ceux qui décrochent (ou ratent) des appels toute la journée.",
+			"Fondateurs, CEO et dirigeants qui veulent réduire les micro-tâches et accélérer leurs opérations.",
 		features: [
-			{ text: "Répond 24/7, sans pause, sans bad mood" },
-			{ text: "Prend réservations, commandes, RDV" },
-			{ text: "Filtre, qualifie, oriente" },
-			{ text: "Parle plusieurs langues" },
-			{ text: "Se branche à vos outils" },
+			{ text: "Prépare vos réunions et vos briefs" },
+			{ text: "Rédige, relance et répond à votre place" },
+			{ text: "Organise vos priorités et vos suivis" },
+			{ text: "Structure et synthétise les informations clés" },
+			{ text: "Exécute depuis un simple message vocal ou écrit" },
 		],
-		promise: "Aucun client perdu.",
-		promiseHighlight: "Aucune équipe submergée.",
-		cta: "Découvrir Ori →",
+		control: [
+			"Chaque action importante nécessite votre validation.",
+			"Vous gardez toujours la main.",
+		],
+		promise: [
+			"Moins de micro-tâches.",
+			"Moins d'intermédiaires.",
+			"Plus de fluidité.",
+		],
+		cta: "Découvrir Iko →",
 	},
 	{
-		id: "iko",
+		id: "ori",
 		index: "▶ Produit 02",
-		tagline: "Votre bras droit, version augmentée.",
+		tagline: "L'agent IA pour vos appels et messages.",
 		audience:
-			"Fondateurs, CEO, dirigeants de PME et start-ups qui n'ont jamais assez de temps.",
+			"Restaurants, groupes et franchises qui veulent traiter chaque demande sans ralentir leurs équipes.",
 		features: [
-			{ text: "Prépare vos réunions à votre place" },
-			{ text: "Rédige et envoie vos mails, à votre voix" },
-			{ text: "Gère votre agenda, prend vos RDV" },
-			{ text: "Vous brief avant chaque échange" },
-			{ text: "Exécute à la voix, où que vous soyez" },
+			{ text: "Répond aux appels entrants 24/7" },
+			{ text: "Gère les demandes sur Instagram et WhatsApp" },
+			{ text: "Traite réservations, modifications et questions clients" },
+			{ text: "Synchronise les échanges en temps réel" },
+			{ text: "Gère plusieurs conversations simultanément, en plusieurs langues" },
 		],
-		promise: "Vous reprenez le contrôle.",
-		promiseHighlight: "Iko gère le reste.",
-		cta: "Découvrir Iko →",
+		promise: [
+			"Plus de demandes traitées.",
+			"Moins d'interruptions.",
+			"Chaque réservation captée.",
+		],
+		cta: "Découvrir Ori →",
 	},
 ];
 
@@ -160,63 +171,19 @@ export const REASSURANCES = ["SOUVERAINETÉ", "VITESSE", "FIABILITÉ"];
 
 export const SECTEURS = [
 	{ sector: "Restauration", name: "Plus une réservation perdue." },
-	{
-		sector: "Hôtellerie",
-		name: "Un ",
-		highlight: "concierge",
-		nameEnd: " IA, multilingue, 24/7.",
-	},
-	{
-		sector: "Santé",
-		name: "Les rendez-vous se prennent.",
-		highlight: "Vous soignez.",
-	},
-	{
-		sector: "Retail",
-		name: "Vos clients servis ",
-		highlight: "avant",
-		nameEnd: " d'avoir attendu.",
-	},
-	{
-		sector: "BTP & Artisanat",
-		name: "Devis, planning, relances.",
-		highlight: "Tout suit.",
-	},
-	{
-		sector: "Services B2B",
-		name: "Leads ",
-		highlight: "qualifiés.",
-		nameEnd: " Agendas remplis.",
-	},
-	{
-		sector: "Formation",
-		name: "Les apprenants avancent,",
-		highlight: "vous aussi.",
-	},
-	{
-		sector: "Logistique",
-		name: "Vos clients informés",
-		highlight: "en temps réel.",
-	},
-	{
-		sector: "Immobilier",
-		name: "Les bons prospects.",
-		highlight: "Au bon moment.",
-	},
-	{
-		sector: "Juridique",
-		name: "Filtrage, confidentialité,",
-		highlight: "sérénité.",
-	},
-	{
-		sector: "Finance",
-		name: "Relances, KYC, reporting.",
-		highlight: "Sans friction.",
-	},
+	{ sector: "Hôtellerie", name: "Une présence continue multilingue." },
+	{ sector: "Santé", name: "Moins d'attente.\nPlus de prise en charge." },
+	{ sector: "Retail", name: "Chaque client pris en charge immédiatement." },
+	{ sector: "Immobilier", name: "Réponses instantanées.\nDossiers automatiquement filtrés." },
+	{ sector: "Finance", name: "Analyse accélérée.\nDécisions mieux préparées." },
+	{ sector: "Juridique", name: "Les demandes arrivent déjà filtrées." },
+	{ sector: "Formation", name: "L'apprentissage sans friction." },
+	{ sector: "Logistique", name: "Chaque étape suivie automatiquement." },
+	{ sector: "BTP", name: "Relances de devis et gestion de planning automatisées." },
+	{ sector: "Support client", name: "Zéro ticket en attente." },
 	{
 		sector: "Sur-mesure",
-		name: "Votre métier",
-		highlight: "n'est pas listé ?",
+		name: "Votre métier n'est pas listé ? Parlons-en →",
 		cta: true,
 	},
 ] as const;

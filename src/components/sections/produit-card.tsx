@@ -68,18 +68,35 @@ export function ProduitCard({ product, direction = "left" }: ProduitCardProps) {
 				</ul>
 			</div>
 
+			{/* Control (iko only) */}
+			{product.control && (
+				<div className="flex flex-col gap-2">
+					<span className="text-[11px] tracking-[.18em] uppercase text-gris font-medium">
+						Le contrôle
+					</span>
+					<div className="flex flex-col gap-0.5">
+						{product.control.map((line, i) => (
+							<p key={i} className="text-[14.5px] leading-normal text-encre m-0">
+								{line}
+							</p>
+						))}
+					</div>
+				</div>
+			)}
+
 			{/* Promise */}
 			<div className="mt-auto pt-7 border-t border-encre flex flex-col gap-4">
 				<div className="flex flex-col gap-2">
 					<span className="text-[11px] tracking-[.18em] uppercase text-gris font-medium">
 						La promesse
 					</span>
-					<p className="text-lg font-medium tracking-[-0.01em] leading-tight m-0">
-						{product.promise}{" "}
-						<em className="text-coral italic font-normal">
-							{product.promiseHighlight}
-						</em>
-					</p>
+					<div className="flex flex-col gap-0.5">
+						{product.promise.map((line, i) => (
+							<p key={i} className="text-lg font-medium tracking-[-0.01em] leading-tight m-0">
+								{line}
+							</p>
+						))}
+					</div>
 				</div>
 				<Btn variant="primary" href="#contact" className="self-start">
 					{product.cta}

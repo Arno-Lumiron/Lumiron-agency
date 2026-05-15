@@ -8,13 +8,13 @@ export function OffreSection() {
     <section id="offre" className="py-17.5" aria-labelledby="offre-heading">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <SectionHeading
-          eyebrow="Ce que l'on propose"
+          eyebrow="CAPACITÉS"
           heading={
             <>
-              Des solutions <span className="text-coral">complètes</span>, du premier appel jusqu&apos;au <span className="text-coral">tableau de bord.</span>
+              De l&apos;échange client jusqu&apos;au <span className="text-coral">pilotage opérationnel.</span>
             </>
           }
-          lead="Lumiron ne vend pas seulement de la technologie&nbsp;: nous concevons des écosystèmes opérationnels, intégrés à vos outils existants et pilotés par la donnée."
+          lead="Des systèmes autonomes intégrés à vos outils, conçus pour centraliser les flux et fluidifier l'exécution."
         />
 
         <div
