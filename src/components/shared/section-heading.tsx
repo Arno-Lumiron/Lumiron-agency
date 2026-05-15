@@ -37,7 +37,7 @@ export function SectionHeading({
 				<p
 					className={cn(
 						"mt-2 text-[17px] leading-[1.4] max-w-[90ch]",
-						light ? "text-gris-light" : "text-gris",
+						light ? "text-gris-light" : "text-encre",
 					)}
 				>
 					{lead}

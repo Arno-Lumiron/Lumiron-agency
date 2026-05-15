@@ -10,7 +10,7 @@ export function AvisSection() {
         <SectionHeading
           eyebrow="ILS EN PARLENT"
           heading={
-            <>Les équipes retrouvent du temps <span className="text-coral">pour l&apos;essentiel.</span></>
+            <>Les équipes retrouvent du temps <br /><span className="text-coral">pour l&apos;essentiel.</span></>
           }
           lead={<>Moins d&apos;interruptions, moins de tâches répétitives, plus de fluidité dans les opérations du quotidien.</>}
         />

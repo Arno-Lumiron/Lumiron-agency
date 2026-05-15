@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedReveal } from "@/components/shared/animated-reveal";
-import { OFFRE_ITEMS } from "@/lib/constants";
+import { Btn } from "@/components/shared/btn";
+import { OFFRE_ITEMS, OFFRE_CTA } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function OffreSection() {
@@ -11,7 +12,8 @@ export function OffreSection() {
 					eyebrow="CAPACITÉS"
 					heading={
 						<>
-							De l&apos;échange client jusqu&apos;au{" "}
+							De l&apos;échange client jusqu&apos;au
+							<br />
 							<span className="text-coral">pilotage opérationnel.</span>
 						</>
 					}
@@ -19,54 +21,65 @@ export function OffreSection() {
 				/>
 
 				<div
-					className="grid grid-cols-1 lg:grid-cols-3 border-t border-l border-encre"
+					className="border-t border-l border-encre"
 					role="list"
 					aria-label="Nos offres"
 				>
-					{OFFRE_ITEMS.map((item, i) => (
-						<AnimatedReveal
-							key={item.num}
-							delay={i * 80}
-							className={cn(
-								"border-r border-b border-encre p-5 lg:p-9 flex flex-col gap-4 lg:min-h-75 transition-colors duration-200",
-								item.featured
-									? "bg-encre text-ivoire hover:bg-encre"
-									: "bg-ivoire hover:bg-white",
-							)}
-							role="listitem"
-						>
-							{/* Head */}
-							<div>
-								<span
+					<div className="grid grid-cols-1 lg:grid-cols-3">
+						{OFFRE_ITEMS.map((item, i) => (
+							<AnimatedReveal
+								key={item.num}
+								delay={i * 80}
+								className={cn(
+									"border-r border-b border-encre p-5 lg:p-9 flex flex-col gap-4 lg:min-h-75 transition-colors duration-200",
+									item.featured
+										? "bg-encre text-ivoire hover:bg-encre"
+										: "bg-ivoire hover:bg-white",
+								)}
+								role="listitem"
+							>
+								<div>
+									<span
+										className={cn(
+											"inline-flex items-center justify-center shrink-0",
+											item.featured ? "text-coral" : "text-encre",
+										)}
+										aria-hidden="true"
+									>
+										<item.Icon size={26} strokeWidth={1.5} />
+									</span>
+								</div>
+								<h3
 									className={cn(
-										"inline-flex items-center justify-center shrink-0",
-										item.featured ? "text-coral" : "text-encre",
+										"text-2xl font-medium tracking-[-0.015em] leading-[1.1] mt-2",
+										item.featured ? "text-ivoire" : "text-encre",
 									)}
-									aria-hidden="true"
 								>
-									<item.Icon size={26} strokeWidth={1.5} />
-								</span>
-							</div>
+									{item.title}
+								</h3>
+								<p
+									className={cn(
+										"text-[14.5px] leading-[1.55] m-0",
+										item.featured ? "text-gris-light" : "text-gris",
+									)}
+								>
+									{item.description}
+								</p>
+							</AnimatedReveal>
+						))}
+					</div>
 
-							<h3
-								className={cn(
-									"text-2xl font-medium tracking-[-0.015em] leading-[1.1] mt-2",
-									item.featured ? "text-ivoire" : "text-encre",
-								)}
-							>
-								{item.title}
-							</h3>
-
-							<p
-								className={cn(
-									"text-[14.5px] leading-[1.55] m-0",
-									item.featured ? "text-gris-light" : "text-gris",
-								)}
-							>
-								{item.description}
-							</p>
-						</AnimatedReveal>
-					))}
+					{/* Séparateur CTA */}
+					<AnimatedReveal
+						className="border-r border-b border-encre bg-ivoire px-5 lg:px-9 py-5 flex items-center gap-6"
+						role="presentation"
+					>
+						<div className="flex-1 h-px bg-encre" aria-hidden="true" />
+						<Btn variant="primary" href={OFFRE_CTA.href} className="shrink-0 whitespace-nowrap">
+							{OFFRE_CTA.cta}
+						</Btn>
+						<div className="flex-1 h-px bg-encre" aria-hidden="true" />
+					</AnimatedReveal>
 				</div>
 			</div>
 		</section>

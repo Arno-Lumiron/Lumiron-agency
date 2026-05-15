@@ -7,7 +7,7 @@ import {
 	StaggerChild,
 } from "@/components/shared/animated-stagger";
 import { HeroGraphic } from "./hero-graphic";
-import { REASSURANCES } from "@/lib/constants";
+import { REASSURANCES, CALENDLY_URL } from "@/lib/constants";
 
 export function HeroSection() {
 	return (
@@ -51,7 +51,7 @@ export function HeroSection() {
 							delay={780}
 							className="flex gap-3 mt-7 flex-wrap items-center"
 						>
-							<Btn variant="primary" href="#contact">
+							<Btn variant="primary" href={CALENDLY_URL}>
 								RÉSERVER UNE DÉMO
 							</Btn>
 							<Btn variant="outline" href="#produits">
@@ -72,7 +72,10 @@ export function HeroSection() {
 				</div>
 
 				{/* Reassurance bar */}
-				<AnimatedStagger immediate className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-xs text-encre tracking-[.04em]">
+				<AnimatedStagger
+					immediate
+					className="mt-10 pt-6 border-t border-encre flex gap-10 flex-wrap text-xs text-encre tracking-[.04em]"
+				>
 					{REASSURANCES.map((item) => (
 						<StaggerChild key={item}>
 							<span className="inline-flex items-center gap-2">

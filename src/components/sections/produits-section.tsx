@@ -1,6 +1,4 @@
 import { SectionHeading } from "@/components/shared/section-heading";
-import { AnimatedReveal } from "@/components/shared/animated-reveal";
-import { Btn } from "@/components/shared/btn";
 import { ProduitCard } from "./produit-card";
 import { PRODUCTS } from "@/lib/constants";
 
@@ -16,7 +14,8 @@ export function ProduitsSection() {
 					eyebrow="NOS PRODUITS PHARES"
 					heading={
 						<>
-							L&apos;un gère vos échanges.{" "}
+							L&apos;un gère vos échanges.
+							<br />
 							<span className="text-coral">
 								L&apos;autre accélère l&apos;exécution.
 							</span>
@@ -30,12 +29,11 @@ export function ProduitsSection() {
 					className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] border-t-2 border-b-2 border-encre bg-encre"
 					aria-label="Nos deux produits"
 				>
-					<div id="iko">
-						<ProduitCard product={PRODUCTS[0]} direction="left" />
+					<div id="ori">
+						<ProduitCard product={PRODUCTS[0]} index={0} />
 					</div>
-					{/* Divider */}
 					<div className="hidden md:block bg-encre w-px" aria-hidden="true" />
-					<ProduitCard product={PRODUCTS[1]} direction="right" />
+					<ProduitCard product={PRODUCTS[1]} index={1} />
 				</div>
 			</div>
 		</section>

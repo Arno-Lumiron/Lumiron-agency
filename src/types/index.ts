@@ -45,6 +45,7 @@ export interface Product {
   audience: string;
   features: ProductFeature[];
   control?: string[];
+  suivi?: string[];
   promise: string[];
   cta: string;
 }

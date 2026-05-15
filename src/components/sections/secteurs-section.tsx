@@ -45,7 +45,8 @@ export function SecteursSection() {
 					eyebrow="SECTEURS"
 					heading={
 						<>
-							Pensé pour les opérations.{" "}
+							Pensé pour les opérations.
+							<br />
 							<span className="text-coral">Adapté à chaque métier.</span>
 						</>
 					}
@@ -67,7 +68,7 @@ export function SecteursSection() {
 								key={item.sector}
 								delay={delay}
 								className={cn(
-									"border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-evenly md:min-h-50 min-h-40 transition-colors duration-200",
+									"border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-start md:min-h-50 min-h-40 transition-colors duration-200",
 									!isCta && "hover:bg-ivoire-soft group",
 									isCta && "bg-encre text-ivoire",
 									// remove right border on last of each row
@@ -76,13 +77,13 @@ export function SecteursSection() {
 								role="listitem"
 							>
 								{/* Top row: icon + sector label */}
-								<div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-3">
+								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3">
 									<span
 										className={cn(
 											"w-10 h-10 inline-flex items-center justify-center transition-colors duration-200",
 											isCta
 												? "text-coral"
-												: "text-encre group-hover:text-coral",
+												: "text-coral",
 										)}
 										aria-hidden="true"
 									>

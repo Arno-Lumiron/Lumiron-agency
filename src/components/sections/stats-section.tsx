@@ -18,7 +18,8 @@ export function StatsSection() {
 					eyebrow="Chiffres"
 					heading={
 						<>
-							Les opérations évoluent.{" "}
+							Les opérations évoluent.
+							<br />
 							<span className="text-coral">Les résultats aussi.</span>
 						</>
 					}

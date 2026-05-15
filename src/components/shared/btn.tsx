@@ -68,8 +68,14 @@ export function Btn({ children, variant, href, onClick, className, type = 'butto
   const innerCls = cn(btnInnerVariants({ variant }), className);
 
   if (href) {
+    const isExternal = href.startsWith('http');
     return (
-      <a href={href} className={wrapperCls} aria-label={ariaLabel}>
+      <a
+        href={href}
+        className={wrapperCls}
+        aria-label={ariaLabel}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      >
         <span className={innerCls}>{children}</span>
       </a>
     );

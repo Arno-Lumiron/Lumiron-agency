@@ -15,8 +15,8 @@ import type {
 } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
-	{ label: "Ori", href: "#produits" },
-	{ label: "Iko", href: "#iko" },
+	{ label: "Iko", href: "https://iko.lumiron.ai/" },
+	{ label: "Ori", href: "https://ori.lumiron.ai/" },
 	{ label: "Blog", href: "#blog" },
 ];
 
@@ -65,6 +65,15 @@ export const OFFRE_ITEMS: OffreItem[] = [
 			"Données chiffrées, accès sécurisés et infrastructure conforme aux exigences RGPD.",
 	},
 ];
+
+export const CALENDLY_URL =
+	"https://calendly.com/anthony-lumiron/decouvrir_lumiron";
+
+export const OFFRE_CTA = {
+	label: "Prêt à automatiser vos opérations ?",
+	cta: "Réserver une démo →",
+	href: CALENDLY_URL,
+};
 
 export const STATS: StatItem[] = [
 	{
@@ -159,6 +168,9 @@ export const PRODUCTS: Product[] = [
 			{
 				text: "Gère plusieurs conversations simultanément, en plusieurs langues",
 			},
+		],
+		suivi: [
+			"Toutes les demandes restent centralisées, suivies et accessibles en temps réel.",
 		],
 		promise: [
 			"Plus de demandes traitées.",
