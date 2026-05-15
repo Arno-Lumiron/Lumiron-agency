@@ -11,10 +11,10 @@ import { REASSURANCES } from "@/lib/constants";
 
 export function HeroSection() {
 	return (
-		<section className="pt-12.5 pb-15" aria-labelledby="hero-heading">
+		<section className="pt-6 pb-15" aria-labelledby="hero-heading">
 			<div className="max-w-7xl mx-auto px-5 md:px-10">
 				{/* Tags */}
-				<AnimatedStagger className="flex gap-2.5 mb-9 flex-wrap">
+				<AnimatedStagger immediate className="flex gap-2.5 mb-4 flex-wrap">
 					<StaggerChild>
 						<Tag variant="black">✦ STANDARD D&apos;EXÉCUTION INTELLIGENTE</Tag>
 					</StaggerChild>
@@ -27,7 +27,7 @@ export function HeroSection() {
 						<AnimatedText
 							as="h1"
 							id="hero-heading"
-							className="font-medium text-[clamp(52px,6vw,76px)] leading-[1.1] tracking-[-0.04em] m-0 mb-8"
+							className="font-medium text-[clamp(52px,6vw,76px)] leading-[1.1] tracking-[-0.04em] m-0 mb-6"
 							delayPerChar={22}
 						>
 							L&apos;agence qui construit les{" "}
@@ -37,7 +37,7 @@ export function HeroSection() {
 							des entreprises.
 						</AnimatedText>
 
-						<AnimatedReveal delay={600}>
+						<AnimatedReveal immediate delay={600}>
 							<p className="text-[17px] leading-[1.55] max-w-[56ch] mb-0 font-normal text-encre">
 								Lumiron bâtit les infrastructures autonomes qui pilotent vos
 								outils, coordonnent vos équipes et valident vos résultats sans
@@ -47,6 +47,7 @@ export function HeroSection() {
 						</AnimatedReveal>
 
 						<AnimatedReveal
+							immediate
 							delay={780}
 							className="flex gap-3 mt-7 flex-wrap items-center"
 						>
@@ -61,6 +62,7 @@ export function HeroSection() {
 
 					{/* Graphic */}
 					<AnimatedReveal
+						immediate
 						direction="right"
 						delay={300}
 						className="hidden md:block"
@@ -70,7 +72,7 @@ export function HeroSection() {
 				</div>
 
 				{/* Reassurance bar */}
-				<AnimatedStagger className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-xs text-encre tracking-[.04em]">
+				<AnimatedStagger immediate className="mt-10 pt-6 border-t border-encre flex gap-6 flex-wrap text-xs text-encre tracking-[.04em]">
 					{REASSURANCES.map((item) => (
 						<StaggerChild key={item}>
 							<span className="inline-flex items-center gap-2">

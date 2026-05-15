@@ -28,7 +28,7 @@ export function Navbar() {
       )}
       role="banner"
     >
-      <nav className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-18" aria-label="Navigation principale">
+      <nav className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-14" aria-label="Navigation principale">
         {/* Logo */}
         <Link href="/" aria-label="Lumiron — Retour à l'accueil">
           <Image
@@ -37,7 +37,7 @@ export function Navbar() {
             width={77}
             height={23}
             priority
-            className="h-5.5 w-auto"
+            className="h-5 w-auto"
           />
         </Link>
 
@@ -57,7 +57,7 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-xs">
+          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-xs px-4 py-2.5">
             Réserver une démo →
           </Btn>
 

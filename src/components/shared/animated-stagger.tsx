@@ -9,11 +9,13 @@ interface AnimatedStaggerProps {
   children: ReactNode;
   className?: string;
   staggerMs?: number;
+  immediate?: boolean;
 }
 
-export function AnimatedStagger({ children, className, staggerMs = 70 }: AnimatedStaggerProps) {
+export function AnimatedStagger({ children, className, staggerMs = 70, immediate = false }: AnimatedStaggerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '0px 0px -12% 0px', amount: 0.08 });
+  const scrollInView = useInView(ref, { once: true, margin: '0px 0px -12% 0px', amount: 0.08 });
+  const inView = immediate || scrollInView;
   const reduced = useReducedMotion();
 
   return (

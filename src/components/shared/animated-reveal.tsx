@@ -13,6 +13,7 @@ interface AnimatedRevealProps extends HTMLAttributes<HTMLDivElement> {
   delay?: number;
   className?: string;
   threshold?: number;
+  immediate?: boolean;
 }
 
 const INITIAL: Record<Direction, { opacity: number; x?: number; y?: number }> = {
@@ -28,10 +29,12 @@ export function AnimatedReveal({
   delay = 0,
   className,
   threshold = 0.08,
+  immediate = false,
   ...rest
 }: AnimatedRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '0px 0px -12% 0px', amount: threshold });
+  const scrollInView = useInView(ref, { once: true, margin: '0px 0px -12% 0px', amount: threshold });
+  const inView = immediate || scrollInView;
   const reduced = useReducedMotion();
 
   return (
