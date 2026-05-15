@@ -156,7 +156,9 @@ export const PRODUCTS: Product[] = [
 			{ text: "Gère les demandes sur Instagram et WhatsApp" },
 			{ text: "Traite réservations, modifications et questions clients" },
 			{ text: "Synchronise les échanges en temps réel" },
-			{ text: "Gère plusieurs conversations simultanément, en plusieurs langues" },
+			{
+				text: "Gère plusieurs conversations simultanément, en plusieurs langues",
+			},
 		],
 		promise: [
 			"Plus de demandes traitées.",
@@ -174,16 +176,22 @@ export const SECTEURS = [
 	{ sector: "Hôtellerie", name: "Une présence continue multilingue." },
 	{ sector: "Santé", name: "Moins d'attente.\nPlus de prise en charge." },
 	{ sector: "Retail", name: "Chaque client pris en charge immédiatement." },
-	{ sector: "Immobilier", name: "Réponses instantanées.\nDossiers automatiquement filtrés." },
+	{
+		sector: "Immobilier",
+		name: "Réponses instantanées.\nDossiers automatiquement filtrés.",
+	},
 	{ sector: "Finance", name: "Analyse accélérée.\nDécisions mieux préparées." },
 	{ sector: "Juridique", name: "Les demandes arrivent déjà filtrées." },
 	{ sector: "Formation", name: "L'apprentissage sans friction." },
 	{ sector: "Logistique", name: "Chaque étape suivie automatiquement." },
-	{ sector: "BTP", name: "Relances de devis et gestion de planning automatisées." },
+	{
+		sector: "BTP",
+		name: "Relances de devis et gestion de planning automatisées.",
+	},
 	{ sector: "Support client", name: "Zéro ticket en attente." },
 	{
 		sector: "Sur-mesure",
-		name: "Votre métier n'est pas listé ? Parlons-en →",
+		name: "Votre métier n'est pas listé ?",
 		cta: true,
 	},
 ] as const;

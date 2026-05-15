@@ -66,19 +66,21 @@ export function Footer() {
 
 				{/* Big watermark */}
 				<div
-					className="mt-10 pt-12 border-t border-[rgba(245,241,232,.18)] text-center font-medium tracking-tighter leading-[.85] lowercase select-none"
-					style={{
-						fontSize: "clamp(52px, 18vw, 320px)",
-						background: "linear-gradient(180deg, #ffffff 0%, #1a1a1a 100%)",
-						WebkitBackgroundClip: "text",
-						backgroundClip: "text",
-						WebkitTextFillColor: "transparent",
-						color: "transparent",
-					}}
+					className="my-10 pt-12 border-t border-[rgba(245,241,232,.18)] flex justify-center select-none"
 					aria-hidden="true"
-				>
-					lumiron.
-				</div>
+					style={{
+						background: "linear-gradient(180deg, #ffffff 0%, #1a1a1a 100%)",
+						WebkitMaskImage: `url('/logo noir fond blanc v2.png')`,
+						maskImage: `url('/logo noir fond blanc v2.png')`,
+						WebkitMaskRepeat: "no-repeat",
+						maskRepeat: "no-repeat",
+						WebkitMaskPosition: "center",
+						maskPosition: "center",
+						WebkitMaskSize: "contain",
+						maskSize: "contain",
+						height: "clamp(52px, 14vw, 140px)",
+					}}
+				/>
 
 				{/* Bottom bar */}
 				<div className="mt-8 flex flex-col sm:flex-row justify-between gap-2 text-xs tracking-[.18em] uppercase text-gris-light">

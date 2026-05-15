@@ -57,7 +57,7 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-xs px-4 py-2.5">
+          <Btn variant="primary" href="#contact" className="hidden md:inline-flex text-[11px] px-3.5 py-2">
             Réserver une démo →
           </Btn>
 
