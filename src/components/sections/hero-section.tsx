@@ -31,16 +31,18 @@ export function HeroSection() {
 							delayPerChar={22}
 						>
 							L&apos;agence qui construit les{" "}
-							<span className="text-coral">syst&egrave;mes IA op&eacute;rationnels</span>{" "}
+							<span className="text-coral">
+								syst&egrave;mes IA op&eacute;rationnels
+							</span>{" "}
 							des entreprises.
 						</AnimatedText>
 
 						<AnimatedReveal delay={600}>
 							<p className="text-[17px] leading-[1.55] max-w-[56ch] mb-0 font-normal text-encre">
-								Lumion bâtit les infrastructures autonomes qui pilotent vos outils,
-								coordonnent vos équipes et valident vos résultats sans intervention
-								humaine. Nous transformons votre vision stratégique en une exécution
-								technique fluide, permanente et sans friction.
+								Lumiron bâtit les infrastructures autonomes qui pilotent vos
+								outils, coordonnent vos équipes et valident vos résultats sans
+								intervention humaine. Nous transformons votre vision stratégique
+								en une exécution technique fluide, permanente et sans friction.
 							</p>
 						</AnimatedReveal>
 
