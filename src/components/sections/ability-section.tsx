@@ -19,7 +19,7 @@ export function OffreSection() {
 				/>
 
 				<div
-					className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-encre"
+					className="grid grid-cols-1 lg:grid-cols-3 border-t border-l border-encre"
 					role="list"
 					aria-label="Nos offres"
 				>
@@ -28,7 +28,7 @@ export function OffreSection() {
 							key={item.num}
 							delay={i * 80}
 							className={cn(
-								"border-r border-b border-encre p-5 md:p-9 flex flex-col gap-4 min-h-55 md:min-h-75 transition-colors duration-200",
+								"border-r border-b border-encre p-5 lg:p-9 flex flex-col gap-4 lg:min-h-75 transition-colors duration-200",
 								item.featured
 									? "bg-encre text-ivoire hover:bg-encre"
 									: "bg-ivoire hover:bg-white",

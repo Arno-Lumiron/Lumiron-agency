@@ -33,7 +33,7 @@ export function StatsSection() {
 						<StaggerChild
 							key={stat.label}
 							className={cn(
-								"border-r border-ivoire p-4 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-between min-h-60",
+								"border-r border-ivoire p-4 md:p-[42px_32px_36px] flex flex-col gap-3.5 justify-start min-h-60",
 								"last:border-r-0",
 								"even:border-r-0 md:even:border-r",
 								i === STATS.length - 1 && "md:border-r-0",

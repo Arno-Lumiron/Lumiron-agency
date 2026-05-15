@@ -53,7 +53,7 @@ export function SecteursSection() {
 				/>
 
 				<div
-					className="grid grid-cols-2 md:grid-cols-4 border-t border-encre"
+					className="grid grid-cols-1 md:grid-cols-4 border-t border-encre"
 					role="list"
 					aria-label="Secteurs couverts"
 				>
@@ -67,12 +67,11 @@ export function SecteursSection() {
 								key={item.sector}
 								delay={delay}
 								className={cn(
-									"border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-between min-h-50 transition-colors duration-200",
+									"border-r border-b border-encre p-4 md:p-8 flex flex-col gap-4 justify-evenly md:min-h-50 min-h-40 transition-colors duration-200",
 									!isCta && "hover:bg-ivoire-soft group",
 									isCta && "bg-encre text-ivoire",
 									// remove right border on last of each row
-									"md:nth-[4n]:border-r-0",
-									"nth-[2n]:border-r-0 md:nth-[2n]:border-r md:nth-[4n]:border-r-0",
+									"border-r-0 md:border-r md:nth-[4n]:border-r-0",
 								)}
 								role="listitem"
 							>
