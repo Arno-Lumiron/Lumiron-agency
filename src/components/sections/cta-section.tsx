@@ -7,6 +7,7 @@ export function CtaSection() {
 			className="pb-17.5 pt-10"
 			aria-labelledby="cta-heading"
 		>
+			{/* Container */}
 			<div className="max-w-7xl mx-auto px-5 md:px-10">
 				<AnimatedReveal>
 					<div className="relative bg-encre text-ivoire p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 overflow-hidden">
